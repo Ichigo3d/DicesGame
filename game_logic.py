@@ -1,7 +1,5 @@
-import random
 
-#
-from dice import draw_dices
+from dice import draw_dices, throw_dices
 from player import Player
 
 name1 = input("Input your name: ")
@@ -9,16 +7,6 @@ name2 = input("Input your name: ")
 
 player1 = Player(name1)
 player2 = Player(name2)
-
-
-def throw_dices():
-    dc_1 = generate_number()
-    dc_2 = generate_number()
-    return dc_1, dc_2
-
-
-def generate_number():
-    return random.randint(1, 6)
 
 
 def compare_scores(total_score1, total_score2):
