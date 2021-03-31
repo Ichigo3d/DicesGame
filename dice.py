@@ -7,9 +7,19 @@ class Dice:
     SIDE6 = ["_____________", "|  *  *  *  |", "|           |", "|  *  *  *  |", "|___________|"]
 
 
-def draw_dice(side):
-    num_side = connect_side(side)
-    for i in num_side:
+def construct_sides(side1, side2):
+    result = []
+    for i in range(5):
+        result.append(f"{side1[i]}    {side2[i]} ")
+    return result
+
+
+
+def draw_dices(side1, side2):
+    num_side1 = connect_side(side1)
+    num_side2 = connect_side(side2)
+    constr = construct_sides(num_side1, num_side2)
+    for i in constr:
         print(i)
 
 

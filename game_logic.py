@@ -1,7 +1,7 @@
 import random
 
 #
-from dice import draw_dice
+from dice import draw_dices
 from player import Player
 
 name1 = input("Input your name: ")
@@ -43,9 +43,8 @@ while True:
     if decision_player == "y":
         dc1, dc2 = throw_dices()
         player1.total_score = sum_score(dc1, dc2)
-        draw_dice(dc1)
-        draw_dice(dc2)
-        print(player1.total_score)
+        draw_dices(dc1, dc2)
+        print(f"Your total score is : {player1.total_score}!")
     else:
         break
     print("_______________________________")
@@ -57,19 +56,23 @@ while True:
     if decision_player == "y":
         dc1, dc2 = throw_dices()
         player2.total_score = sum_score(dc1, dc2)
-        draw_dice(dc1)
-        draw_dice(dc2)
-        print(player2.total_score)
+        draw_dices(dc1, dc2)
+
+        print(f"Your total score is : {player2.total_score}!")
     else:
         break
 
     result = compare_scores(player1.total_score, player2.total_score)
 
     if result == 1:
-        print(f"{player1.name} is winner!")
+        print("_______________________________")
+        print(f"With a score of {player1.total_score}, player {player1.name} becomes the winner!")
+        print("_______________________________")
         break
     elif result == 0:
-        print(f"{player2.name} is winner!")
+        print("_______________________________")
+        print(f"With a score of {player2.total_score}, player {player2.name} becomes the winner!")
+        print("_______________________________")
         break
     elif result == -1:
         print("Draw!!!")
