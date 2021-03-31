@@ -8,6 +8,8 @@ name2 = input("Input your name: ")
 player1 = Player(name1)
 player2 = Player(name2)
 
+# player_list = [player1, player2]
+
 
 def compare_scores(total_score1, total_score2):
     if total_score1 > total_score2:
@@ -34,6 +36,7 @@ while True:
         draw_dices(dc1, dc2)
         print(f"Your total score is : {player1.total_score}!")
     else:
+        print("Bye, see you soon!")
         break
     print("_______________________________")
     print(f"{player2.name} it's your turn!")
@@ -48,6 +51,7 @@ while True:
 
         print(f"Your total score is : {player2.total_score}!")
     else:
+        print("Bye, see you soon!")
         break
 
     result = compare_scores(player1.total_score, player2.total_score)
@@ -56,16 +60,21 @@ while True:
         print("_______________________________")
         print(f"With a score of {player1.total_score}, player {player1.name} becomes the winner!")
         print("_______________________________")
-        break
+        decision_player = input("Do you want to play again? Input 'y':\n")
+        if decision_player != "y":
+            print("Bye, see you soon!")
+            break
     elif result == 0:
         print("_______________________________")
         print(f"With a score of {player2.total_score}, player {player2.name} becomes the winner!")
         print("_______________________________")
-        break
+        decision_player = input("Do you want to play again? Input 'y':\n")
+        if decision_player != "y":
+            print("Bye, see you soon!")
+            break
     elif result == -1:
         print("Draw!!!")
-
-dice1 = 0
-dice2 = 0
-total_score_player1 = 0
-total_score_player2 = 0
+        decision_player = input("Do you want to play again? Input 'y':\n")
+        if decision_player != "y":
+            print("Bye, see you soon!")
+            break
