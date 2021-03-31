@@ -32,8 +32,8 @@ def draw_dices(side1, side2):
     """
     num_side1 = connect_side(side1)
     num_side2 = connect_side(side2)
-    constr = construct_sides(num_side1, num_side2)
-    for i in constr:
+    construction = construct_sides(num_side1, num_side2)
+    for i in construction:
         print(i)
 
 
