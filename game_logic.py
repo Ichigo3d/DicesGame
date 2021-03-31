@@ -9,7 +9,6 @@ player2 = Player(name2)
 
 player_list = [player1, player2]
 
-
 def compare_scores(total_score1, total_score2):
     if total_score1 > total_score2:
         return 1
@@ -20,9 +19,6 @@ def compare_scores(total_score1, total_score2):
 
 
 def sum_score(dc_1, dc_2):
-    """
-    sum up dices sides numbers
-    """
     return dc_1 + dc_2
 
 
@@ -40,6 +36,3 @@ def select_winner(score1, score2):
         print("_______________________________")
         print("Draw!!!")
         print("_______________________________")
-
-
-

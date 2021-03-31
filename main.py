@@ -2,6 +2,7 @@ from dice import throw_dices, draw_dices
 from game_logic import *
 
 break_flag = False
+
 while True:
     for i in player_list:
         if not break_flag:
